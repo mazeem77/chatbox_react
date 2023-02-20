@@ -1,0 +1,327 @@
+html,body {
+    height:100%;
+    width:100%;
+    margin:0;
+}
+
+:root{
+    --font:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    --bcolor: -webkit-linear-gradient(top, rgba(135,224,253,1) 0%,rgba(5,171,224,1) 100%);
+    --teel: #338180;
+    --lightBlack: #3F4652;
+    --darkBlack: #272C33;
+}
+
+body,body{
+    height: 100%;
+    width:100%;
+    background-color: var(--teel);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.outerBox{
+    position: absolute;
+    width: 98%;
+    height: 85%;
+    display:flex;
+    top: 1%;
+    left: 1%;
+    flex-direction: row;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.leftColumn{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    height: 115%;
+    left: 0%;
+    top: 0%;
+    margin: auto;
+    border-radius: 12px;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid white;
+}
+
+.upperLeft{
+    position: absolute;
+    display:flex;
+    width: 100%;
+    height: 25%;
+    flex-direction: column;
+    background-color:var(--darkBlack);
+    top: 0%;
+    left: 0%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.upperRight{
+    position: relative;
+    display:flex;
+    width: 100%;
+    height: 5%;
+    background-color:var(--darkBlack);
+    top: 0%;
+    left: 0%;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px; 
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid white;
+}
+
+.upperLeft p{
+    position: relative;
+    color: white;
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+.upperRight p{
+    position: relative;
+    color: white;
+    font-family: var(--font);
+    font-size: 18px;
+}
+
+.upperLeft img{
+    position: relative;
+    top: 14px;
+    height: 75%;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.lowerLeft{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    background: var(--lightBlack);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;    
+    align-items: left;
+    width: 100%;
+    height: 75%;
+    top: 12.6%;
+}
+
+.lowerRight{
+    position: relative;
+    display:flex;
+    flex-direction: column;
+    background: var(--lightBlack);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;    
+    align-items: left;
+    width: 100%;
+    height: 75%;
+    top: 12.6%;
+}
+
+.lowerLeft .title{
+    font-family: var(--font);
+    font-size: 16px;
+    color: rgb(194, 189, 189);
+}
+
+.lowerLeft .details{
+    position: relative;
+    font-family: var(--font);
+    font-size: 18px;
+    color: white;
+    line-height: 10px;   /* within paragraph */
+    margin-bottom: 20px; /* between paragraphs */
+    margin-left: 30px;
+    margin-top: 0px; /* between paragraphs */
+}
+
+.lowerLeft p {
+    margin-left: 5px;
+}
+
+/* For Chat */
+.centerColumn{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    width: 58%;
+    height: 100%;
+    top: 0%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: #EDF2F4;
+    align-items: center;
+    justify-content: center;
+}
+
+.messageBox{
+    position: absolute;
+    display:flex;
+    flex-direction: row;
+    bottom: 60px;
+    width: 100%;
+    margin: auto;
+    border: 1px solid var(--lightBlack);
+}
+
+.messageText{
+    position: absolute;
+    width: 80%;
+    left: 2%;
+    padding-top: 10px;
+}
+
+.messageText input{
+    position: relative;
+    width: 100%;
+    height: 30px;
+    padding: 5px;
+    font-size: 18px;
+    font-family: var(--font);
+    color:rgb(105, 105, 105);
+    background-color: transparent;
+    border: none;
+    outline:none;
+}
+
+::placeholder{
+    color: rgb(163, 163, 163);
+}
+
+.messageBox ion-icon {
+    color: #EDF2F4;
+}
+
+.sendButton{
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    right: 0px;
+}
+
+.sendButton button{
+    bottom: -1px;
+    position: absolute;
+    height: 60px;
+    width: 100px;
+    background-color: var(--lightBlack);
+    border: 2px solid var(--lightBlack);
+    border-bottom-right-radius: 6px;
+}
+
+.chat-body {
+    position: absolute;
+    display:flex;
+    width: 100%;
+    height: 80%;
+    border-radius: 10px;
+
+}
+.chat-body .message-container {
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+  
+.chat-body .message-container::-webkit-scrollbar {
+    display: none;
+}
+.chat-body .message {
+    height: auto;
+    padding: 10px;
+    display: flex;
+}
+  
+.chat-body .message .message-content {
+    width: auto;
+    height: auto;
+    min-height: 40px;
+    max-width: 120px;
+    background-color: #43a047;
+    border-radius: 5px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-right: 5px;
+    padding-left: 5px;
+    overflow-wrap: break-word;
+    word-break: break-word;
+}
+  
+#you {
+    justify-content: flex-start;
+}
+  
+#you .message-content {
+    justify-content: flex-start;
+}
+  
+#you .message-meta {
+    justify-content: flex-start;
+    margin-left: 5px;
+}
+  
+#other {
+    justify-content: flex-end;
+}
+  
+#other .message-content {
+    justify-content: flex-end;
+    background-color: cornflowerblue;
+}
+  
+#other .message-meta {
+    justify-content: flex-end;
+    margin-right: 5px;
+}
+  
+.message-meta #author {
+    margin-left: 10px;
+    font-weight: bold;
+}
+  
+.chat-body .message .message-meta {
+    display: flex;
+    font-size: 12px;
+}
+
+
+/* Right Column: For Friend List */
+.rightColumn{
+    position: absolute;
+    display:flex;
+    flex-direction: column;
+    width: 20%;
+    height: 115%;
+    right: 0%;
+    top: 0%;
+    margin: auto;
+    border-radius: 10px;
+    background-color: var(--lightBlack);
+    border: 2px solid white;
+}
+
+.friendlist{  
+    color: #EDF2F4;
+    position: relative;
+    list-style: none;
+    left: 5%;
+    top: -10%;
+}
+.friendlist a{  
+    color: #EDF2F4;
+}
